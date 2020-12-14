@@ -13,6 +13,9 @@ class Slingshot{
             this.object=Constraint.create(options)
         World.add(world, this.object);
       }
+      attach(body){
+        this.object.bodyA=body;
+      }
       fly(){
           this.object.bodyA=null;
       }

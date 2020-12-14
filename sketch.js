@@ -32,6 +32,7 @@ function setup(){
 
     pig1 = new Pig(810, 350);
     pig2 = new Pig(810, 220);
+    //console.log(pig1.speed)
 
     log1 = new Log(810,260,300, PI/2);
     log2 =  new Log(810,180,300, PI/2);
@@ -66,7 +67,7 @@ function draw(){
     log3.display();
     log4.display();
     Slingshot1.display();
-    console.log(mouseX)
+
 }
 
 function mouseDragged(){
@@ -74,4 +75,9 @@ function mouseDragged(){
 }
 function mouseReleased(){
     Slingshot1.fly();
+}
+function keyPressed(){
+    if (keyCode === 32){
+        Slingshot1.attach(Bird1.body);
+    }
 }
